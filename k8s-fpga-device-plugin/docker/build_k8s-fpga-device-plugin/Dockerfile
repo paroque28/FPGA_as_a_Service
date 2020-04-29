@@ -27,7 +27,9 @@ RUN mkdir -p ${GOPATH}/bin
 
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
-COPY . .
+COPY vendor $GOPATH/src/github.com/xilinx/k8s-fpga-device-plugin/vendor
+COPY *.go $GOPATH/src/github.com/xilinx/k8s-fpga-device-plugin/
+COPY build $GOPATH/src/github.com/xilinx/k8s-fpga-device-plugin/
 
 RUN ./build
 
