@@ -38,7 +38,7 @@ spec:
       - image: paroque28/k8s-fpga-device-plugin:latest
         name: xilinx-fpga-device-plugin
         securityContext:
-          allowPrivilegeEscalation: false
+          privileged: true
           capabilities:
             drop: ["ALL"]
         volumeMounts:
