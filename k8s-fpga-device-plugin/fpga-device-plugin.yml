@@ -35,7 +35,7 @@ spec:
       - key: CriticalAddonsOnly
         operator: Exists
       containers:
-      - image: paroque28/k8s-fpga-device-plugin:16.04
+      - image: paroque28/k8s-fpga-device-plugin:latest
         name: xilinx-fpga-device-plugin
         securityContext:
           allowPrivilegeEscalation: false
